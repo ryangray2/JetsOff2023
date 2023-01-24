@@ -83,11 +83,13 @@ img: ''
 var QuinnenWilliams = {
 name: 'Quinnen Williams',
 pos: 'DT',
-age: ' ',
+age: '25',
 capPenalty: 11500000,
 weight: '',
 salary: 9594000  ,
-img: ''
+cYears: 4,
+cTotal: 100,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4040982.png&w=350&h=254'
 };
 var ZachWilson = {
 name: 'Zach Wilson',

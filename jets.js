@@ -14,6 +14,7 @@ var darnoldNav = 0;
 var broadFA = [];
 
 var tradedFor = [];
+var extendedArr = [];
 var tradedAway = [];
 
 var draftSummary = [];
@@ -816,6 +817,96 @@ function generateTeamFA() {
   while (root.firstChild) {
     root.removeChild(root.firstChild);
   }
+  var playerDiv = document.createElement("div");
+  playerDiv.classList.add("playerDiv");
+  playerDiv.style.backgroundColor = "cornsilk";
+
+//// PICTURE
+  var imgrow = document.createElement("div");
+  imgrow.classList.add("row", "text-center");
+
+  var imgcol = document.createElement("div");
+  imgcol.classList.add("col-12");
+
+  var img = document.createElement("img");
+  img.setAttribute("src", QuinnenWilliams.img);
+  img.classList.add("faImg");
+
+  imgcol.appendChild(img);
+  imgrow.appendChild(imgcol);
+  playerDiv.appendChild(imgrow);
+  // root.appendChild(imgrow);
+////
+  var row = document.createElement("div");
+  row.classList.add("row", "text-center");
+
+  var nameCol = document.createElement("div");
+  nameCol.classList.add("col-12");
+
+  var nameP = document.createElement("p");
+  nameP.classList.add("faName");
+  nameP.innerHTML = QuinnenWilliams.name.toUpperCase();
+  nameCol.appendChild(nameP);
+  row.appendChild(nameCol);
+
+
+      // var dumCol = document.createElement("div");
+      // dumCol.classList.add("col-3");
+      //     row.appendChild(dumCol);
+
+  var posCol = document.createElement("div");
+  posCol.classList.add("col-12");
+
+  var posP = document.createElement("p");
+  posP.classList.add("faPos");
+  posP.innerHTML = QuinnenWilliams.pos + "  /  Age: " + QuinnenWilliams.age;
+  posCol.appendChild(posP);
+  row.appendChild(posCol);
+
+  // var ageCol = document.createElement("div");
+  // ageCol.classList.add("col-3");
+  //
+  // var ageP = document.createElement("p");
+  // ageP.classList.add("faAge");
+  // ageP.innerHTML = teamFA[i].age;
+  // ageCol.appendChild(ageP);
+  // row.appendChild(ageCol);
+
+
+  var priceCol = document.createElement("div");
+  priceCol.classList.add("col-12");
+
+  var priceP = document.createElement("p");
+  priceP.classList.add("faPrice");
+  priceP.innerHTML = QuinnenWilliams.cYears + " yr./$" + QuinnenWilliams.cTotal + "M";
+  priceCol.appendChild(priceP);
+  row.appendChild(priceCol);
+
+
+  if (!offeredArr.includes(QuinnenWilliams)) {
+    var signCol = document.createElement("div");
+    signCol.classList.add("col-12");
+
+    var signButton = document.createElement("button");
+    signButton.classList.add("signButton", "bttn-md", "bttn-success", "butt");
+    signButton.innerHTML = "EXTEND";
+    signButton.addEventListener('click', function() {
+      extendedArr.push(QuinnenWilliams);
+      offeredArr.push(QuinnenWilliams);
+      updateCapBar() // fix
+      generateTeamFA();
+      generateRoster();
+    });
+    signCol.appendChild(signButton);
+    row.appendChild(signCol);
+  }
+
+  if (offeredArr.includes(QuinnenWilliams)) {
+    row.style.opacity = ".5";
+  }
+  var hr = document.createElement("hr");
+  playerDiv.appendChild(row);
+  root.appendChild(playerDiv);
   for (let i = 0; i < teamFA.length; i++) {
     var playerDiv = document.createElement("div");
     playerDiv.classList.add("playerDiv");
@@ -2063,6 +2154,30 @@ function generateSummary() {
   } else{
     document.getElementById("sHead").style.display = "none";
     var root3 = document.getElementById("signedSection");
+    root3.classList.remove("col-6", "col-lg-3");
+    root3.classList.add("col-0");
+  }
+  var root5 = document.getElementById("extended");
+  while (root5.firstChild) {
+    root5.removeChild(root5.firstChild);
+  }
+  if (extendedArr.length != 0) {
+    for (var i = 0; i < extendedArr.length; i++) {
+      var row = document.createElement("div");
+      row.classList.add("row");
+      var col = document.createElement("div");
+      col.classList.add("col-12");
+      var p = document.createElement("div");
+      p.classList.add("sumP");
+      p.innerHTML = "<b>" + extendedArr[i].name + "</b><br /> (" + extendedArr[i].cYears + " yr./$" + extendedArr[i].cTotal + " mil)";
+
+      col.appendChild(p);
+      row.appendChild(col);
+      root5.appendChild(row);
+    }
+  } else{
+    document.getElementById("exHead").style.display = "none";
+    var root3 = document.getElementById("extendedSection");
     root3.classList.remove("col-6", "col-lg-3");
     root3.classList.add("col-0");
   }
