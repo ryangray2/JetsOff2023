@@ -624,8 +624,8 @@ var BryceHuff = {
 name: 'Bryce Huff',
 pos: 'LB',
 age: '24.7',
-cYears: 3,
-cTotal: 21,
+cYears: 1,
+cTotal: 4.3,
 weight: '',
 salary: 0,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4039375.png&w=350&h=254'

@@ -662,11 +662,11 @@ var lamarOffer = {
 var aaronOffer = {
   team: gb,
   receiveText: ["Aaron Rodgers"],
-  giveText: ["2023 Round 1", "2023 Round 2", "2024 Round 1", "2025 Round 1", "Elijah Moore", "Michael Carter II", "Micheal Clemons"],
+  giveText: ["2023 Round 1", "2023 Round 2", "2024 Round 1"],
   receiveIndex: [],
   giveIndex: [returnPickIndex(1, false, nyj), returnPickIndex(2, false, nyj)],
   receivePlayer: [AaronRodgers],
-  givePlayer: [ElijahMoore, MichaelCarterII, MichealClemons]
+  givePlayer: []
 }
 
 twoTradeArr = [carrOffer, lamarOffer, aaronOffer];
