@@ -278,7 +278,7 @@ weight: '',
 salary: 1028714  ,
 img: ''
 };
-var MichaelCarter = {
+var MichaelCarterII = {
 name: 'Michael Carter',
 pos: 'CB',
 age: ' ',
@@ -622,8 +622,8 @@ var BryceHuff = {
 name: 'Bryce Huff',
 pos: 'LB',
 age: '24.7',
-cYears: 1,
-cTotal: .825,
+cYears: 3,
+cTotal: 21,
 weight: '',
 salary: 0,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4039375.png&w=350&h=254'
@@ -676,4 +676,4 @@ var rollover = 3192622;
 // var salaryCap = 211686546;
 var salaryCap = 228192622;
 
-var currRosterArr = [ CJMosley, LakenTomlinson, CarlLawson, DJReed, JohnFranklinMyers, DuaneBrown, CoreyDavis, CJUzomah, JordanWhitehead, QuinnenWilliams, ZachWilson, TylerConklin, BraxtonBerrios, AhmadGardner, MekhiBecton, GarrettWilson, AlijahVeraTucker, JermaineJohnson, ElijahMoore, JustinHardee, BreeceHall, DenzelMims, AshtynDavis, ThomasHennessy, JeremyRuckert, MichaelCarter, BryceHall, MaxMitchell, MichealClemons, BradenMann, JamienSherwood, MichaelCarter, CraigJames, ChrisStreveler, MalikTaylor, BrandinEchols, JimmyMoreland, TanzelSmart, RodneyAdams, ChazzSurratt, KennyYeboah, TonyAdams, ZonovanKnight, MarquissSpencer, ChrisGlaser,  GeorgeFant, ConnorMcGovern, SheldonRankins, JoeFlacco, DanFeeney, GregZuerlein, LaMarcusJoyner, MikeWhite, NateHerbig, SolomonThomas, KwonAlexander, VinnyCurry, CedricOgbuehi, MikeRemmers, NathanShepherd, NickBawden, DruSamia, GregSenat, QuincyWilliams, HamsahNasirildeen, JeffSmith, BryceHuff, JamesRobinson, LawrenceCager, TyJohnson, MarcellHarris]
+var currRosterArr = [ CJMosley, LakenTomlinson, CarlLawson, DJReed, JohnFranklinMyers, DuaneBrown, CoreyDavis, CJUzomah, JordanWhitehead, QuinnenWilliams, ZachWilson, TylerConklin, BraxtonBerrios, AhmadGardner, MekhiBecton, GarrettWilson, AlijahVeraTucker, JermaineJohnson, ElijahMoore, JustinHardee, BreeceHall, DenzelMims, AshtynDavis, ThomasHennessy, JeremyRuckert, MichaelCarter, BryceHall, MaxMitchell, MichealClemons, BradenMann, JamienSherwood, MichaelCarterII, CraigJames, ChrisStreveler, MalikTaylor, BrandinEchols, JimmyMoreland, TanzelSmart, RodneyAdams, ChazzSurratt, KennyYeboah, TonyAdams, ZonovanKnight, MarquissSpencer, ChrisGlaser,  GeorgeFant, ConnorMcGovern, SheldonRankins, JoeFlacco, DanFeeney, GregZuerlein, LaMarcusJoyner, MikeWhite, NateHerbig, SolomonThomas, KwonAlexander, VinnyCurry, CedricOgbuehi, MikeRemmers, NathanShepherd, NickBawden, DruSamia, GregSenat, QuincyWilliams, HamsahNasirildeen, JeffSmith, BryceHuff, JamesRobinson, LawrenceCager, TyJohnson, MarcellHarris]

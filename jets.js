@@ -166,10 +166,10 @@ function instPressed() {
   document.getElementById("instCont").style.display = "none";
     document.getElementById("trans2").style.display = "block";
       document.getElementById("trans1").style.display = "none";
-    // yesTwo();
+    yesTwo();
   generateRoster();
   generateTeamFA();
-  skipTrade();
+  // skipTrade();
 }
 
 
@@ -1159,7 +1159,7 @@ function generateRoster() {
   noteCol.classList.add("col-12");
 
   var noteP = document.createElement("p");
-  noteP.innerHTML = "(Max of 6 players can be cut.)";
+  noteP.innerHTML = "(Max of 8 players can be cut.)";
 
   noteCol.appendChild(noteP);
   noterow.appendChild(noteCol);
@@ -1232,7 +1232,7 @@ function generateRoster() {
     row2.appendChild(nameCol2);
 
 
-    if (!signedArr.includes(activeRoster[i]) && cutArr.length < 6) {
+    if (!signedArr.includes(activeRoster[i]) && cutArr.length < 8) {
 
       var penCol = document.createElement("div");
       penCol.classList.add("col-3", "col-md-3");
