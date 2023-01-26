@@ -2995,7 +2995,7 @@ function pickOffer() {
     console.log(currPickTrade);
     for (var i = 0; i < picksSend.length; i++) {
       draftOrder[picksSend[i][0]][picksSend[i][1]] = currTeam;
-      tradedAway.push("2022 Round " + (picksSend[i][0] + 1) + " (#" + (picksSend[i][1] + 1) + ")");
+      tradedAway.push("2023 Round " + (picksSend[i][0] + 1) + " (#" + (picksSend[i][1] + 1) + ")");
       // if (leftOff[0] === picksSend[i][0] && (leftOff[1] - 1) === picksSend[i][1]) {
       //   currPickTrade = true;
       // }
@@ -3007,7 +3007,7 @@ function pickOffer() {
     }
     for (var i = 0; i < picksGet.length; i++) {
       draftOrder[picksGet[i][0]][picksGet[i][1]] = nyj;
-      tradedFor.push("2022 Round " + (picksGet[i][0] + 1) + " (#" + (picksGet[i][1] + 1) + ")");
+      tradedFor.push("2023 Round " + (picksGet[i][0] + 1) + " (#" + (picksGet[i][1] + 1) + ")");
     }
     finishPickTrade("yes");
   } else {
