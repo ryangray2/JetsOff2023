@@ -987,17 +987,27 @@ function generateTeamFA() {
       var signCol = document.createElement("div");
       signCol.classList.add("col-12");
 
-      var signButton = document.createElement("button");
-      signButton.classList.add("signButton", "bttn-md", "bttn-success", "butt");
-      signButton.innerHTML = "SIGN";
-      signButton.addEventListener('click', function() {
-        signTeamFA(teamFA[i]);
-      });
+      var sal = teamFA[i].salary = (teamFA[i].cTotal * 1000000) / teamFA[i].cYears;
+      if (getCapRoom() - sal < 0) {
+        var signButton = document.createElement("p");
+        signButton.style.backgroundColor = "#ca5656";
+        signButton.style.paddingLeft = "15px";
+        signButton.innerHTML = "NOT ENOUGH SPACE";
+      } else {
+        var signButton = document.createElement("button");
+        signButton.classList.add("signButton", "bttn-md", "bttn-success", "butt");
+        signButton.innerHTML = "SIGN";
+        signButton.addEventListener('click', function() {
+          signTeamFA(teamFA[i]);
+        });
+      }
+
+
       signCol.appendChild(signButton);
       row.appendChild(signCol);
     }
-
-    if (offeredArr.includes(teamFA[i])) {
+ var sal = teamFA[i].salary = (teamFA[i].cTotal * 1000000) / teamFA[i].cYears;
+    if (offeredArr.includes(teamFA[i]) || getCapRoom() - sal < 0) {
       row.style.opacity = ".5";
     }
     var hr = document.createElement("hr");
