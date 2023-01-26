@@ -3,6 +3,7 @@ var teamFA = [];
 var offeredArr = [];
 var signedArr = [];
 var cutArr = [];
+var restArr = [];
 var taken = [];
 var jetsDrafted = [];
 var leftOff = [0, 0];
@@ -900,10 +901,19 @@ function generateTeamFA() {
     signCol.appendChild(signButton);
     row.appendChild(signCol);
   }
+  var noteCol = document.createElement("div");
+  noteCol.classList.add("col-12");
+
+  var noteP = document.createElement("p");
+  noteP.classList.add("faPrice");
+  noteP.innerHTML = "(Extension does not affect this year's cap room)";
+  noteCol.appendChild(noteP);
+  row.appendChild(noteCol);
 
   if (offeredArr.includes(QuinnenWilliams)) {
     row.style.opacity = ".5";
   }
+
   var hr = document.createElement("hr");
   playerDiv.appendChild(row);
   root.appendChild(playerDiv);
@@ -1014,6 +1024,7 @@ function signTeamFA(guy) {
     // console.log(activeRoster);
   }
 }
+
 
 function popUp(guy, yes) {
   // var target = document.getElementById(guy.name.replace(/\s+/g, ''));
@@ -1250,7 +1261,8 @@ function generateRoster() {
   noteCol.classList.add("col-12");
 
   var noteP = document.createElement("p");
-  noteP.innerHTML = "(Max of 8 players can be cut.)";
+  noteP.innerHTML = "Max of 10 players can be cut/restructured ";
+  noteP.innerHTML += "<br />" + "(" + (10 - (cutArr.length + restArr.length)) + " left)";
 
   noteCol.appendChild(noteP);
   noterow.appendChild(noteCol);
@@ -1261,7 +1273,7 @@ function generateRoster() {
   row.classList.add("row");
 
   var posCol = document.createElement("div");
-  posCol.classList.add("col-2");
+  posCol.classList.add("col-1");
 
   var posP = document.createElement("p");
   posP.classList.add("rosterHead");
@@ -1270,7 +1282,7 @@ function generateRoster() {
   row.appendChild(posCol);
 
   var nameCol = document.createElement("div");
-  nameCol.classList.add("col-4", "col-md-4");
+  nameCol.classList.add("col-3", "col-md-3");
 
   var nameP = document.createElement("p");
   nameP.classList.add("rosterHead");
@@ -1287,8 +1299,17 @@ function generateRoster() {
   saveCol.appendChild(saveP);
   row.appendChild(saveCol);
 
+var reCol = document.createElement("div");
+reCol.classList.add("col-3", "col-md-3");
+
+var reP = document.createElement("p");
+reP.classList.add("rosterHead");
+reP.innerHTML = "";
+reCol.appendChild(reP);
+row.appendChild(reCol);
+
   var chCol = document.createElement("div");
-  chCol.classList.add("col-3", "col-md-3");
+  chCol.classList.add("col-1", "col-md-1");
 
   var chP = document.createElement("p");
   chP.classList.add("rosterHead");
@@ -1305,7 +1326,7 @@ function generateRoster() {
     row2.classList.add("row");
 
     var posCol2 = document.createElement("div");
-    posCol2.classList.add("col-2");
+    posCol2.classList.add("col-1");
 
     var posP2 = document.createElement("p");
     posP2.classList.add("rosterPos");
@@ -1314,7 +1335,7 @@ function generateRoster() {
     row2.appendChild(posCol2);
 
     var nameCol2 = document.createElement("div");
-    nameCol2.classList.add("col-4", "col-md-4");
+    nameCol2.classList.add("col-3", "col-md-3");
 
     var nameP2 = document.createElement("p");
     nameP2.classList.add("rosterName");
@@ -1323,38 +1344,78 @@ function generateRoster() {
     row2.appendChild(nameCol2);
 
 
-    if (!signedArr.includes(activeRoster[i]) && cutArr.length < 8) {
+    if (!signedArr.includes(activeRoster[i]) && (cutArr.length + restArr.length) < 10 && !restArr.includes(activeRoster[i])) {
 
       var penCol = document.createElement("div");
       penCol.classList.add("col-3", "col-md-3");
 
+
       var penP = document.createElement("p");
-      penP.classList.add("rosterName");
-      var num = activeRoster[i].salary - activeRoster[i].capPenalty;
-      if (num < 0) {
-        penP.style.color = "#ca5656";
+      if (activeRoster[i].rest > 0) {
+        penP.classList.add("rosterName")
+        var num = activeRoster[i].rest;
+      } else {
+        penP.classList.add("rosterName");
+        var num = activeRoster[i].salary - activeRoster[i].capPenalty;
+        if (num < 0) {
+          penP.style.color = "#ca5656";
+        }
       }
+
+      // var num = activeRoster[i].salary - activeRoster[i].capPenalty;
+      // if (num < 0) {
+      //   penP.style.color = "#ca5656";
+      // }
       penP.innerHTML = "$" + addCommas(num);
       penCol.appendChild(penP);
       row2.appendChild(penCol);
 
+///////////
+var restCol = document.createElement("div");
+restCol.classList.add("col-3");
+///<i class="fa fa-minus-circle" aria-hidden="true"></i>
+console.log(activeRoster[i].name + ": " + activeRoster[i].rest);
+if (activeRoster[i].rest > 0) {
+  var restButton = document.createElement("button");
+  restButton.classList.add("rosterCut", "btn");
+
+  restButton.addEventListener('click', function() {
+    restPlayer(activeRoster[i]);
+    // restPopUp();
+  });
+
+  var restP = document.createElement("p");
+  restP.classList.add("restructureText");
+  restP.innerHTML = "RESTRUCTURE"
+  // restP.setAttribute("aria-hidden", "true");
+
+  restButton.appendChild(restP);
+  restCol.appendChild(restButton);
+}
+
+row2.appendChild(restCol);
+
 
       var cutCol = document.createElement("div");
-      cutCol.classList.add("col-3");
+      cutCol.classList.add("col-1");
  ///<i class="fa fa-minus-circle" aria-hidden="true"></i>
-      var cutButton = document.createElement("button");
-      cutButton.classList.add("rosterCut", "btn");
+      if (!restArr.includes(activeRoster[i]) && !activeRoster[i].rest > 0) {
+        var cutButton = document.createElement("button");
+        cutButton.classList.add("rosterCut", "btn");
 
-      cutButton.addEventListener('click', function() {
-        cutPlayer(activeRoster[i]);
-      });
+        cutButton.addEventListener('click', function() {
+          cutPlayer(activeRoster[i]);
+        });
 
-      var icon = document.createElement("i");
-      icon.classList.add("fa", "fa-minus-circle", "fa-lg");
-      icon.setAttribute("aria-hidden", "true");
+        var icon = document.createElement("i");
+        icon.classList.add("fa", "fa-minus-circle", "fa-lg");
+        icon.setAttribute("aria-hidden", "true");
 
-      cutButton.appendChild(icon);
-      cutCol.appendChild(cutButton);
+        cutButton.appendChild(icon);
+        cutCol.appendChild(cutButton);
+      }
+
+
       row2.appendChild(cutCol);
     }
     root.appendChild(row2);
@@ -1374,6 +1435,26 @@ function cutPlayer(guy) {
   }
 }
 
+function restPlayer(guy) {
+  restArr.push(guy);
+  guy.salary -= guy.rest;
+  guy.rest = 0;
+  updateCapBar();
+  generateRoster();
+  if (broad) {
+      generateBroadFA(currKind);
+  } else {
+    generateTeamFA();
+  }
+}
+
+function restPopUp(guy) {
+  var pop = document.getElementById("restPop");
+
+  pop.style.display = "block";
+
+
+}
 
 function playersPressed() {
   document.getElementById("draftPoolHeader").style.display = "flex";
@@ -2824,7 +2905,7 @@ function generateTeamPicks(team) {
     p.innerHTML =  "R" + round + " P" + pick;
     p.setAttribute("id", "r" + nyj.picks[k][0] + "p" + nyj.picks[k][1])
     p.addEventListener('click', function() {
-      addSend(nyj.picks[k]);
+      addSend(nyj.picks[k]); //hellomyfriend
     });
     col1.appendChild(p);
   }
@@ -2974,13 +3055,13 @@ function evaluatePickTrade() {
   console.log("send");
   for (let i = 0; i < picksSend.length; i++) {
     var value = draftValue[picksSend[i][0]][picksSend[i][1]];
-    console.log(value);
+    console.log("mine: " + value);
     sendValue += value;
   }
   console.log("get");
   for (let j = 0; j < picksGet.length; j++) {
     var value = draftValue[picksGet[j][0]][picksGet[j][1]];
-    console.log(value);
+    console.log("theirs:" + value);
     getValue += value;
   }
   if (sendValue >= getValue) {

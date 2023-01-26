@@ -35,6 +35,7 @@ var JohnFranklinMyers = {
   height: '6-4',
   weight: '288',
   salary: 12500000,
+  rest: 6880000,
   img: '',
   capPenalty: 13700000
 };
@@ -411,6 +412,7 @@ var CJUzomah = {
   height: '6-1',
   weight: '190',
   salary: 4666666,
+  rest: 3420000,
   img: '',
   capPenalty: 15000000
 };
@@ -423,6 +425,7 @@ var LakenTomlinson = {
   weight: '190',
   salary: 5380000,
   img: '',
+  rest: 5770000,
   capPenalty: 13900000
 };
 
@@ -466,6 +469,7 @@ var DJReed = {
   height: '6-1',
   weight: '190',
   salary: 4601754,
+  rest: 4710000,
   img: '',
   capPenalty: 10500000
 };
@@ -477,6 +481,7 @@ var TylerConklin = {
   height: '6-1',
   weight: '190',
   salary: 3373333,
+  rest: 2510000,
   img: '',
   capPenalty: 10000000
 };

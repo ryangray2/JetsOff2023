@@ -612,7 +612,7 @@ var DerekCarr = {
     age: '31',
     height: '6-3',
     weight: '200',
-    salary: 34875000,
+    salary: 33000000,
     img: '',
     capPenalty: 5625000
 };
@@ -623,7 +623,7 @@ var LamarJackson = {
     age: '26',
     height: '6-1',
     weight: '185',
-    salary: 50000000,
+    salary: 35400000,
     img: '',
     capPenalty: 50000000
 };
@@ -634,7 +634,7 @@ var AaronRodgers = {
     age: '39',
     height: '6-1',
     weight: '195',
-    salary: 31623568,
+    salary: 15790000,
     img: '',
     capPenalty: 99778568
 };
@@ -652,11 +652,11 @@ var carrOffer = {
 var lamarOffer = {
   team: bal,
   receiveText: ["Lamar Jackson"],
-  giveText: ["2023 Round 1", "2023 Round 2", "2024 Round 1", "2025 Round 1", "Elijah Moore", "Michael Carter II", "Micheal Clemons"],
+  giveText: ["2023 Round 1", "2023 Round 2", "2024 Round 1", "2025 Round 1"],
   receiveIndex: [],
   giveIndex: [returnPickIndex(1, false, nyj), returnPickIndex(2, false, nyj)],
   receivePlayer: [LamarJackson],
-  givePlayer: [ElijahMoore, MichaelCarterII, MichealClemons]
+  givePlayer: []
 }
 
 var aaronOffer = {

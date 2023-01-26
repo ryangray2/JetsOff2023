@@ -1,7 +1,7 @@
 
 var CJMosley = {
 name: 'C.J. Mosley',
-pos: 'ILB',
+pos: 'LB',
 age: ' ',
 capPenalty: 14904000,
 weight: '',
@@ -15,11 +15,12 @@ age: ' ',
 capPenalty: 18520000,
 weight: '',
 salary: 17360000  ,
+rest: 5770000,
 img: ''
 };
 var CarlLawson = {
 name: 'Carl Lawson',
-pos: 'DE',
+pos: 'EDGE',
 age: ' ',
 capPenalty: 333334,
 weight: '',
@@ -32,21 +33,23 @@ pos: 'CB',
 age: ' ',
 capPenalty: 6310000,
 weight: '',
+rest: 4710000,
 salary: 14155000  ,
 img: ''
 };
 var JohnFranklinMyers = {
 name: 'John Franklin-Myers',
-pos: 'DE',
+pos: 'EDGE',
 age: ' ',
 capPenalty: 1200000,
 weight: '',
+rest: 6880000,
 salary: 12400000  ,
 img: ''
 };
 var DuaneBrown = {
 name: 'Duane Brown',
-pos: 'LT',
+pos: 'OT',
 age: ' ',
 capPenalty: 6304000,
 weight: '',
@@ -68,6 +71,7 @@ pos: 'TE',
 age: ' ',
 capPenalty: 11643334,
 weight: '',
+rest: 3420000,
 salary: 10321666  ,
 img: ''
 };
@@ -82,7 +86,7 @@ img: ''
 };
 var QuinnenWilliams = {
 name: 'Quinnen Williams',
-pos: 'DT',
+pos: 'IDL',
 age: '25',
 capPenalty: 11500000,
 weight: '',
@@ -106,6 +110,7 @@ pos: 'TE',
 age: ' ',
 capPenalty: 7276668,
 weight: '',
+rest: 6880000,
 salary: 8438333  ,
 img: ''
 };
@@ -147,7 +152,7 @@ img: ''
 };
 var AlijahVeraTucker = {
 name: 'Alijah Vera-Tucker',
-pos: 'OT',
+pos: 'OL',
 age: ' ',
 capPenalty: 9386607,
 weight: '',
@@ -156,7 +161,7 @@ img: ''
 };
 var JermaineJohnson = {
 name: 'Jermaine Johnson',
-pos: 'DE',
+pos: 'EDGE',
 age: ' ',
 capPenalty: 10707908,
 weight: '',
@@ -201,7 +206,7 @@ img: ''
 };
 var AshtynDavis = {
 name: 'Ashtyn Davis',
-pos: 'FS',
+pos: 'S',
 age: ' ',
 capPenalty: 284070,
 weight: '',
@@ -246,7 +251,7 @@ img: ''
 };
 var MaxMitchell = {
 name: 'Max Mitchell',
-pos: 'T',
+pos: 'OT',
 age: ' ',
 capPenalty: 597018,
 weight: '',
@@ -255,7 +260,7 @@ img: ''
 };
 var MichealClemons = {
 name: 'Micheal Clemons',
-pos: 'DE',
+pos: 'EDGE',
 age: ' ',
 capPenalty: 573072,
 weight: '',
@@ -336,7 +341,7 @@ img: ''
 };
 var TanzelSmart = {
 name: 'Tanzel Smart',
-pos: 'DT',
+pos: 'IDL',
 age: ' ',
 capPenalty: 0,
 weight: '',
@@ -390,7 +395,7 @@ img: ''
 };
 var MarquissSpencer = {
 name: 'Marquiss Spencer',
-pos: 'DE',
+pos: 'EDGE',
 age: ' ',
 capPenalty: 0,
 weight: '',
@@ -422,7 +427,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2583951
 };
 var ConnorMcGovern = {
 name: 'Connor McGovern',
-pos: 'C',
+pos: 'IOL',
 age: '29.7',
 cYears: 2,
 cTotal: 25,
@@ -432,7 +437,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2577367
 };
 var SheldonRankins = {
 name: 'Sheldon Rankins',
-pos: 'DT',
+pos: 'IDL',
 age: '28.8',
 cYears: 2,
 cTotal: 14,
@@ -472,7 +477,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14993.p
 };
 var LaMarcusJoyner = {
 name: 'LaMarcus Joyner',
-pos: 'FS',
+pos: 'S',
 age: '32.1',
 cYears: 1,
 cTotal: 4.1,
@@ -502,7 +507,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4044438
 };
 var SolomonThomas = {
 name: 'Solomon Thomas',
-pos: 'DE',
+pos: 'IDL',
 age: '27.3',
 cYears: 2,
 cTotal: 7,
@@ -512,7 +517,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3117258
 };
 var KwonAlexander = {
 name: 'Kwon Alexander',
-pos: 'ILB',
+pos: 'LB',
 age: '28.4',
 cYears: 2,
 cTotal: 5,
@@ -522,7 +527,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2976541
 };
 var VinnyCurry = {
 name: 'Vinny Curry',
-pos: 'DE',
+pos: 'EDGE',
 age: '34.5',
 cYears: 1,
 cTotal: 1.5,
@@ -532,7 +537,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14959.p
 };
 var CedricOgbuehi = {
 name: 'Cedric Ogbuehi',
-pos: 'T',
+pos: 'OT',
 age: '30.7',
 cYears: 2,
 cTotal: 5,
@@ -552,7 +557,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15422.p
 };
 var NathanShepherd = {
 name: 'Nathan Shepherd',
-pos: 'DE',
+pos: 'IDL',
 age: '29.2',
 cYears: 1,
 cTotal: 2,
@@ -582,7 +587,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3821678
 };
 var GregSenat = {
 name: 'Greg Senat',
-pos: 'T',
+pos: 'OT',
 age: '28.3',
 cYears: 2,
 cTotal: 2.5,
@@ -602,7 +607,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3110565
 };
 var HamsahNasirildeen = {
 name: 'Hamsah Nasirildeen',
-pos: 'S',
+pos: 'LB',
 age: '23.9',
 cYears: 1,
 cTotal: .825,
@@ -622,7 +627,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3929118
 };
 var BryceHuff = {
 name: 'Bryce Huff',
-pos: 'LB',
+pos: 'EDGE',
 age: '24.7',
 cYears: 1,
 cTotal: 4.3,
@@ -662,7 +667,7 @@ img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3915411
 };
 var MarcellHarris = {
 name: 'Marcell Harris',
-pos: 'OLB',
+pos: 'LB',
 age: '28.6',
 cYears: 1,
 cTotal: .825,
@@ -678,4 +683,4 @@ var rollover = 3192622;
 // var salaryCap = 211686546;
 var salaryCap = 228192622;
 
-var currRosterArr = [ CJMosley, LakenTomlinson, CarlLawson, DJReed, JohnFranklinMyers, DuaneBrown, CoreyDavis, CJUzomah, JordanWhitehead, QuinnenWilliams, ZachWilson, TylerConklin, BraxtonBerrios, AhmadGardner, MekhiBecton, GarrettWilson, AlijahVeraTucker, JermaineJohnson, ElijahMoore, JustinHardee, BreeceHall, DenzelMims, AshtynDavis, ThomasHennessy, JeremyRuckert, MichaelCarter, BryceHall, MaxMitchell, MichealClemons, BradenMann, JamienSherwood, MichaelCarterII, CraigJames, ChrisStreveler, MalikTaylor, BrandinEchols, JimmyMoreland, TanzelSmart, RodneyAdams, ChazzSurratt, KennyYeboah, TonyAdams, ZonovanKnight, MarquissSpencer, ChrisGlaser,  GeorgeFant, ConnorMcGovern, SheldonRankins, JoeFlacco, DanFeeney, GregZuerlein, LaMarcusJoyner, MikeWhite, NateHerbig, SolomonThomas, KwonAlexander, VinnyCurry, CedricOgbuehi, MikeRemmers, NathanShepherd, NickBawden, DruSamia, GregSenat, QuincyWilliams, HamsahNasirildeen, JeffSmith, BryceHuff, JamesRobinson, LawrenceCager, TyJohnson, MarcellHarris]
+var currRosterArr = [ CJMosley, LakenTomlinson, CarlLawson, DJReed, JohnFranklinMyers, DuaneBrown, CoreyDavis, CJUzomah, JordanWhitehead, QuinnenWilliams, ZachWilson, TylerConklin, BraxtonBerrios, AhmadGardner, MekhiBecton, GarrettWilson, AlijahVeraTucker, JermaineJohnson, ElijahMoore, JustinHardee, BreeceHall, DenzelMims, AshtynDavis, ThomasHennessy, JeremyRuckert, MichaelCarter, BryceHall, MaxMitchell, MichealClemons, BradenMann, JamienSherwood, MichaelCarterII, CraigJames, ChrisStreveler, MalikTaylor, BrandinEchols, JimmyMoreland, TanzelSmart, RodneyAdams, ChazzSurratt, KennyYeboah, TonyAdams, ZonovanKnight, MarquissSpencer, ChrisGlaser,  GeorgeFant, ConnorMcGovern, SheldonRankins, JoeFlacco, DanFeeney, GregZuerlein, LaMarcusJoyner, MikeWhite, NateHerbig, SolomonThomas, KwonAlexander, VinnyCurry, CedricOgbuehi, MikeRemmers, NathanShepherd, NickBawden, DruSamia, GregSenat, QuincyWilliams, HamsahNasirildeen, JeffSmith, BryceHuff, JamesRobinson, TyJohnson, MarcellHarris]
