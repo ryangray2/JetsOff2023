@@ -290,13 +290,13 @@ var teams = [az, atl, car, chi, dal, det, gb, lar, min, no, nyg, phi, sf, sea, t
 
 
 var draftOrder = [
-  [chi, hou, az, ind, sea, det, lv, atl, car, phi, ten, hou, nyj, ne, gb, was, pit, det, tb, sea, lac, bal, min, jax, nyg, dal, cin, den, buf, kc, phi],
-  [pit, hou, az, ind, lar, sea, lv, car, no, ten, cle, nyj, atl, gb, ne, was, det, pit, tb, mia, sea, chi, lac, det, jax, nyg, dal, cin, car, buf, kc, phi],
-  [chi, hou, az, den, den, lar, lv, no, ten, hou, nyj, atl, ne, mia, gb, ind, pit, det, tb, sea, mia, lac, bal, min, jax, nyg, dal, cin, car, buf, kc, phi, az, was, cle, sf, nyg, sf],
-  [chi, hou, az, ind, ne, den, lv, atl, cle, nyj, atl, car, no, gb, ne, was, min, pit, jax, kc, sea, bal, lac, cle, jax, nyg, dal, cin, car, buf, kc, chi, ne],
-  [chi, hou, buf, ind, den, cle, lv, cle, nyj, lv, car, no, ten, chi, gb, was, sea, det, tb, sea, sf, lac, bal, min, atl, nyg, dal, cin, sf, buf, kc, no, lar, az, dal, gb, lar, sf, lv, tb, dal, min],
-  [mia, nyj, az, tb, lar, det, ne, jax, ten, ne, hou, lar, cle, lar, ne, was, det, den, tb, kc, sea, bal, lac, hou, ind, nyg, jax, ne, lar, dal, az, lv, was, sf, kc, nyg, kc],
-  [chi, phi, lv, ind, sf, lar, atl, kc, jax, no, ten, cle, tb, lv, gb, was, pit, gb, was, pit, gb, ind, hou, mia, lac, nyg, den, gb, nyg, dal, cin, sf, atl, kc, phi, lar, tb, nyg, sf, gb, kc, ne, gb, no]
+  [car, hou, az, ind, sea, det, lv, atl, chi, phi, ten, hou, nyj, ne, gb, was, pit, det, tb, sea, lac, bal, min, jax, nyg, dal, buf, cin, no, phi, kc],
+  [pit, hou, az, ind, lar, sea, lv, car, no, ten, nyj, nyj, atl, gb, ne, was, det, pit, tb, mia, sea, chi, lac, det, jax, nyg, dal, buf, cin, chi, phi, kc],
+  [chi, hou, az, den, den, lar, lv, no, ten, hou, cle, atl, ne, lar, gb, ind, pit, det, tb, sea, mia, lac, bal, min, jax, nyg, dal, buf, cin, car, phi, kc, az, was, cle, sf, lv, sf, sf],
+  [chi, hou, az, ind, ne, den, lv, atl, cle, nyj, atl, car, no, gb, ne, was, min, pit, jax, kc, sea, bal,lac, cle, jax, nyg, dal, buf, cin, car, chi, kc, ne],
+  [chi, buf, ind, den, cle, lv, cle, nyj, lv, car, no, ten, chi, gb, was, sea, det, tb, sea, sf, lac, bal, min, det, nyg, hou, ind, cin, sf, no, kc, lar, az, dal, gb, lar, nyg, sf, lv, tb, ind, lar],
+  [kc, tb, az, tb, lar, det, ne, jax, ten, ne, hou, lar, cle, lar, ne, was, det, den, tb, mia, sea, bal, lac, hou, jax, hou, lv, buf, cin, nyj, jax, nyg, ne, min, dal, az, lv, was, sf, kc],
+  [chi, phi, lv, ind, sf, lar, atl, atl, jax, no, ten, cle, hou, lv, gb, was, lar, gb, ind, sea, mia, lac, nyg, pit, gb, nyg, dal, ne, cin, sf, phi, kc, kc, pit, tb, sf, nyg, sf, gb, no, chi, hou]
 ];
 
 var draftValue = [

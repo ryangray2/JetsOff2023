@@ -634,7 +634,7 @@ var AaronRodgers = {
     age: '39',
     height: '6-1',
     weight: '195',
-    salary: 15790000,
+    salary: 15750000,
     img: '',
     capPenalty: 99778568
 };
@@ -662,11 +662,44 @@ var lamarOffer = {
 var aaronOffer = {
   team: gb,
   receiveText: ["Aaron Rodgers"],
-  giveText: ["2023 Round 1", "2023 Round 2", "2024 Round 1"],
+  giveText: ["2023 Round 2", "2023 Round 4", "2024 Round 3"],
   receiveIndex: [],
-  giveIndex: [returnPickIndex(1, false, nyj), returnPickIndex(2, false, nyj)],
+  giveIndex: [returnPickIndex(2, false, nyj), returnPickIndex(4, false, nyj)],
   receivePlayer: [AaronRodgers],
   givePlayer: []
 }
 
-twoTradeArr = [carrOffer, lamarOffer, aaronOffer];
+var aaronOffer2 = {
+  team: gb,
+  receiveText: ["Aaron Rodgers", "2023 Round 7"],
+  giveText: ["2023 Round 2", "2023 Round 4", "2024 Round 3", "Corey Davis"],
+  receiveIndex: [],
+  giveIndex: [returnPickIndex(2, false, nyj), returnPickIndex(4, false, nyj)],
+  receivePlayer: [AaronRodgers],
+  givePlayer: [CoreyDavis]
+}
+
+var DeAndreHopkins = {
+    name: "DeAndre Hopkins",
+    pos: 'WR',
+    age: '30',
+    height: '6-1',
+    weight: '212',
+    salary: 19500000,
+    img: '',
+    capPenalty: 11300000
+};
+
+var hopkinsOffer = {
+  team: hou,
+  receiveText: ["DeAndre Hopkins"],
+  giveText: ["2023 Round 5"],
+  receiveIndex: [],
+  giveIndex: [returnPickIndex(5, false, nyj)],
+  receivePlayer: [DeAndreHopkins],
+  givePlayer: []
+}
+
+
+
+twoTradeArr = [aaronOffer, aaronOffer2, hopkinsOffer];

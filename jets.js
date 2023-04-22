@@ -319,6 +319,9 @@ function darnoldLeft() {
 }
 
 function generateTwoOffers(num) {
+  console.log(twoTradeArr);
+  document.getElementById("tradeMenu").style.display = "block";
+  document.getElementById("moreTradesCont").style.display = "none";
   var root = document.getElementById("twoOffers");
   while (root.firstChild) {
     root.removeChild(root.firstChild);
@@ -550,6 +553,14 @@ function finishTrade(type) {
     if (twoTradeArr[twoNav].givePlayer.includes(DenzelMims)) {
       deadCap += 755892;
     }
+
+    // const index2 =  twoTradeArr.indexOf(twoTradeArr[twoNav].givePlayer[i]);
+    console.log(twoNav + " wtf")
+    twoTradeArr.splice(twoNav, 1);
+    if (twoNav === 1 || twoNav === 0) {
+      twoTradeArr.splice(0, 1);
+    }
+    twoNav = 0;
 
     document.getElementById("moreTradesCont").style.display = "block";
     document.getElementById("watsonTrade").style.display = "none";
